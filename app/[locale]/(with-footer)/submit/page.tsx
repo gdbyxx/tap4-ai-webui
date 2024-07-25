@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from 'react';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
@@ -28,7 +30,7 @@ export default function Page() {
         <h2 className='mt-[5px] text-sm font-bold lg:my-3'>{t('subTitle')}</h2>
         <SubmitForm />
       </div>
-      <Faq />
+      {/* <Faq />  */}
     </div>
   );
 }

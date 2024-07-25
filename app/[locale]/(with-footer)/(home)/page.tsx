@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -38,7 +40,7 @@ export default async function Page() {
   const t = await getTranslations('Home');
   const [{ data: categoryList }, { data: navigationList }] = await Promise.all([
     supabase.from('navigation_category').select(),
-    supabase.from('web_navigation').select().order('collection_time', { ascending: false }).limit(12),
+    supabase.from('web_navigation').select().order('collection_time', { ascending: false }).limit(16),
   ]);
 
   return (
@@ -71,7 +73,7 @@ export default async function Page() {
             <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px]' />
           </Link>
         </div>
-        <Faq />
+        {/* <Faq /> */}
         <ScrollToTop />
       </div>
     </div>

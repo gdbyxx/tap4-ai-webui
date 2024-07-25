@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { HTMLAttributeAnchorTarget } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -38,7 +40,7 @@ export default function Footer() {
     },
     {
       title: t('tattoo'),
-      href: 'https://tattooai.design',
+      href: 'https://woy.ai',
     },
   ];
 
@@ -60,7 +62,7 @@ export default function Footer() {
           <h1 className='text-xl font-bold text-white lg:h-8 lg:text-[32px]'>{t('title')}</h1>
           <h2 className='text-xs'>{t('subTitle')}</h2>
         </div>
-        <div className='mt-5 flex flex-col items-center gap-y-5 lg:mt-0 lg:flex-row lg:items-stretch lg:gap-x-10'>
+        <div className='mt-5 flex -translate-x-20 flex-col items-center gap-y-5 lg:mt-0 lg:flex-row lg:items-stretch lg:gap-x-10'>
           <div className='flex w-full flex-col gap-2'>
             <h2 className='font-bold'>{t('support')}</h2>
             {SupportLinks.map((item) => (
@@ -80,14 +82,14 @@ export default function Footer() {
             {INFO_LIST.map((item) => (
               <InfoLink key={item.href} href={item.href} title={item.title} />
             ))}
-            <a
+            {/* <a
               href={`mailto:${CONTACT_US_EMAIL}`}
               className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm'
               title={t('contactUs')}
               type='email'
             >
               {t('contactUs')}
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -27,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h2 className='text-xs lg:text-sm'>{t('subTitle')}</h2>
       </div>
       {children}
-      <Faq />
+      {/* <Faq /> */}
     </div>
   );
 }
